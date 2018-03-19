@@ -1,0 +1,6 @@
+methods call in dynamically
+
+sql server table and row lock ( concurrect handlling methods);
+
+
+pessimistic concurrency in entity framework

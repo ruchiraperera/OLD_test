@@ -1,0 +1,92 @@
+.az_h {
+	box-sizing: border-box;
+	font-size: 15px;
+	line-height: 1.5;
+	z-index: 100;
+}
+
+.az_h *, 
+.az_h *::before, 
+.az_h *::after {
+	box-sizing: inherit;
+}
+
+.az_h .row {
+	overflow: visible;
+}
+
+.az_h .row::before, .az_h .row::after {
+	content: " ";
+	display: table;
+}
+
+.az_h .row::after {
+	clear: both;
+}
+
+.az_h .azure-header_holder {
+	background-color: #1a1a1a;
+}
+
+@media only screen and (max-width: 1632px) {
+    .az_h .azure-header_holder {
+        padding: 0 16px;
+    }
+}
+
+.az_h .azure-header {
+	margin: 0 auto;
+	position: relative;
+	max-width: 1600px;
+	width: auto;
+}
+
+.az_h .icon svg {
+	height: 100%;
+	width: 100%;
+}
+
+.az_h .azure-header_temp .small-search {
+	cursor: initial;
+	overflow: hidden;
+	padding-left: 0px;
+	padding-right: 0px;
+	width: 1px;
+}
+	
+@media only screen and (max-width: 959px) {
+	.az_h .azure-header_temp {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+}
+
+.az_h .azure-header .azure-header_temp  {
+	height: 68px;
+}
+
+.az_h .azure-header .azure-header_temp .logo {
+	position: absolute;
+	top: 20px;
+	left: 0px;
+}
+
+.az_h .azure-header .azure-header_temp .logo>svg {
+	max-height:30px;
+	max-width:142px
+}
+
+@media only screen and (min-width:960px) {
+	.az_h .azure-header .azure-header_temp  {
+		height: 90px;
+	}
+
+	.az_h .azure-header .azure-header_temp .logo {
+		top: 10px;
+		left: 0px;
+	}
+	.az_h .azure-header .azure-header_temp .logo>svg {
+		max-height:36px;
+		max-width:170px
+	}
+}

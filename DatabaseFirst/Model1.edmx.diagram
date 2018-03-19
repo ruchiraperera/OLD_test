@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="890e4d4c5d8a4dcea62711664118e729" Name="Diagram1">
+        <EntityTypeShape EntityType="databaseFirstModel.tbl_course" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="databaseFirstModel.tbl_course_subject" Width="1.5" PointX="3" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="databaseFirstModel.tbl_customer" Width="1.5" PointX="0.75" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="databaseFirstModel.tbl_enroll" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="databaseFirstModel.tbl_subject" Width="1.5" PointX="0.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="databaseFirstModel.tbl_institute" Width="1.5" PointX="5.75" PointY="2.125" IsExpanded="true" />
+        <AssociationConnector Association="databaseFirstModel.FK_tbl_course_subject_tbl_course" ManuallyRouted="false" />
+        <AssociationConnector Association="databaseFirstModel.FK_tbl_enroll_tbl_course" ManuallyRouted="false" />
+        <AssociationConnector Association="databaseFirstModel.FK_tbl_course_subject_tbl_subject" ManuallyRouted="false" />
+        <AssociationConnector Association="databaseFirstModel.FK_tbl_enroll_tbl_customer" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

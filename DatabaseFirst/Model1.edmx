@@ -1,0 +1,344 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="databaseFirstModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tbl_course">
+          <Key>
+            <PropertyRef Name="course_Id" />
+          </Key>
+          <Property Name="course_Id" Type="int" Nullable="false" />
+          <Property Name="course_name" Type="varchar" MaxLength="50" />
+          <Property Name="course_desc" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tbl_course_subject">
+          <Key>
+            <PropertyRef Name="course_subject_id" />
+          </Key>
+          <Property Name="course_subject_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="course_id" Type="int" Nullable="false" />
+          <Property Name="subject_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_customer">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="customer_name" Type="varchar" MaxLength="50" />
+          <Property Name="customer_desc" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tbl_enroll">
+          <Key>
+            <PropertyRef Name="enroll_id" />
+          </Key>
+          <Property Name="enroll_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="student_id" Type="int" />
+          <Property Name="course_id" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'databaseFirst.dbo.tbl_institute' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="tbl_institute">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_subject">
+          <Key>
+            <PropertyRef Name="sub_Id" />
+          </Key>
+          <Property Name="sub_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="subject" Type="varchar" MaxLength="50" />
+          <Property Name="status" Type="bit" />
+        </EntityType>
+        <Association Name="FK_tbl_course_subject_tbl_course">
+          <End Role="tbl_course" Type="Self.tbl_course" Multiplicity="1" />
+          <End Role="tbl_course_subject" Type="Self.tbl_course_subject" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_course">
+              <PropertyRef Name="course_Id" />
+            </Principal>
+            <Dependent Role="tbl_course_subject">
+              <PropertyRef Name="course_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_course_subject_tbl_subject">
+          <End Role="tbl_subject" Type="Self.tbl_subject" Multiplicity="1" />
+          <End Role="tbl_course_subject" Type="Self.tbl_course_subject" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_subject">
+              <PropertyRef Name="sub_Id" />
+            </Principal>
+            <Dependent Role="tbl_course_subject">
+              <PropertyRef Name="subject_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_enroll_tbl_course">
+          <End Role="tbl_course" Type="Self.tbl_course" Multiplicity="0..1" />
+          <End Role="tbl_enroll" Type="Self.tbl_enroll" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_course">
+              <PropertyRef Name="course_Id" />
+            </Principal>
+            <Dependent Role="tbl_enroll">
+              <PropertyRef Name="course_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_enroll_tbl_customer">
+          <End Role="tbl_customer" Type="Self.tbl_customer" Multiplicity="0..1" />
+          <End Role="tbl_enroll" Type="Self.tbl_enroll" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_customer">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tbl_enroll">
+              <PropertyRef Name="student_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="databaseFirstModelStoreContainer">
+          <EntitySet Name="tbl_course" EntityType="Self.tbl_course" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_course_subject" EntityType="Self.tbl_course_subject" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_customer" EntityType="Self.tbl_customer" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_enroll" EntityType="Self.tbl_enroll" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_subject" EntityType="Self.tbl_subject" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_institute" EntityType="Self.tbl_institute" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [tbl_institute].[ID] AS [ID]
+    FROM [dbo].[tbl_institute] AS [tbl_institute]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_tbl_course_subject_tbl_course" Association="Self.FK_tbl_course_subject_tbl_course">
+            <End Role="tbl_course" EntitySet="tbl_course" />
+            <End Role="tbl_course_subject" EntitySet="tbl_course_subject" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_course_subject_tbl_subject" Association="Self.FK_tbl_course_subject_tbl_subject">
+            <End Role="tbl_subject" EntitySet="tbl_subject" />
+            <End Role="tbl_course_subject" EntitySet="tbl_course_subject" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_enroll_tbl_course" Association="Self.FK_tbl_enroll_tbl_course">
+            <End Role="tbl_course" EntitySet="tbl_course" />
+            <End Role="tbl_enroll" EntitySet="tbl_enroll" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_enroll_tbl_customer" Association="Self.FK_tbl_enroll_tbl_customer">
+            <End Role="tbl_customer" EntitySet="tbl_customer" />
+            <End Role="tbl_enroll" EntitySet="tbl_enroll" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="databaseFirstModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="tbl_course">
+          <Key>
+            <PropertyRef Name="course_Id" />
+          </Key>
+          <Property Name="course_Id" Type="Int32" Nullable="false" />
+          <Property Name="course_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="course_desc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tbl_course_subject" Relationship="Self.FK_tbl_course_subject_tbl_course" FromRole="tbl_course" ToRole="tbl_course_subject" />
+          <NavigationProperty Name="tbl_enroll" Relationship="Self.FK_tbl_enroll_tbl_course" FromRole="tbl_course" ToRole="tbl_enroll" />
+        </EntityType>
+        <EntityType Name="tbl_course_subject">
+          <Key>
+            <PropertyRef Name="course_subject_id" />
+          </Key>
+          <Property Name="course_subject_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="course_id" Type="Int32" Nullable="false" />
+          <Property Name="subject_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="tbl_course" Relationship="Self.FK_tbl_course_subject_tbl_course" FromRole="tbl_course_subject" ToRole="tbl_course" />
+          <NavigationProperty Name="tbl_subject" Relationship="Self.FK_tbl_course_subject_tbl_subject" FromRole="tbl_course_subject" ToRole="tbl_subject" />
+        </EntityType>
+        <EntityType Name="tbl_customer">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="customer_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="customer_desc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tbl_enroll" Relationship="Self.FK_tbl_enroll_tbl_customer" FromRole="tbl_customer" ToRole="tbl_enroll" />
+        </EntityType>
+        <EntityType Name="tbl_enroll">
+          <Key>
+            <PropertyRef Name="enroll_id" />
+          </Key>
+          <Property Name="enroll_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="student_id" Type="Int32" />
+          <Property Name="course_id" Type="Int32" />
+          <NavigationProperty Name="tbl_course" Relationship="Self.FK_tbl_enroll_tbl_course" FromRole="tbl_enroll" ToRole="tbl_course" />
+          <NavigationProperty Name="tbl_customer" Relationship="Self.FK_tbl_enroll_tbl_customer" FromRole="tbl_enroll" ToRole="tbl_customer" />
+        </EntityType>
+        <EntityType Name="tbl_subject">
+          <Key>
+            <PropertyRef Name="sub_Id" />
+          </Key>
+          <Property Name="sub_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="subject" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="status" Type="Boolean" />
+          <NavigationProperty Name="tbl_course_subject" Relationship="Self.FK_tbl_course_subject_tbl_subject" FromRole="tbl_subject" ToRole="tbl_course_subject" />
+        </EntityType>
+        <EntityType Name="tbl_institute">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <Association Name="FK_tbl_course_subject_tbl_course">
+          <End Role="tbl_course" Type="Self.tbl_course" Multiplicity="1" />
+          <End Role="tbl_course_subject" Type="Self.tbl_course_subject" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_course">
+              <PropertyRef Name="course_Id" />
+            </Principal>
+            <Dependent Role="tbl_course_subject">
+              <PropertyRef Name="course_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_enroll_tbl_course">
+          <End Role="tbl_course" Type="Self.tbl_course" Multiplicity="0..1" />
+          <End Role="tbl_enroll" Type="Self.tbl_enroll" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_course">
+              <PropertyRef Name="course_Id" />
+            </Principal>
+            <Dependent Role="tbl_enroll">
+              <PropertyRef Name="course_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_course_subject_tbl_subject">
+          <End Role="tbl_subject" Type="Self.tbl_subject" Multiplicity="1" />
+          <End Role="tbl_course_subject" Type="Self.tbl_course_subject" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_subject">
+              <PropertyRef Name="sub_Id" />
+            </Principal>
+            <Dependent Role="tbl_course_subject">
+              <PropertyRef Name="subject_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_enroll_tbl_customer">
+          <End Role="tbl_customer" Type="Self.tbl_customer" Multiplicity="0..1" />
+          <End Role="tbl_enroll" Type="Self.tbl_enroll" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_customer">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tbl_enroll">
+              <PropertyRef Name="student_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="databaseFirstEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tbl_course" EntityType="Self.tbl_course" />
+          <EntitySet Name="tbl_course_subject" EntityType="Self.tbl_course_subject" />
+          <EntitySet Name="tbl_customer" EntityType="Self.tbl_customer" />
+          <EntitySet Name="tbl_enroll" EntityType="Self.tbl_enroll" />
+          <EntitySet Name="tbl_subject" EntityType="Self.tbl_subject" />
+          <EntitySet Name="tbl_institute" EntityType="Self.tbl_institute" />
+          <AssociationSet Name="FK_tbl_course_subject_tbl_course" Association="Self.FK_tbl_course_subject_tbl_course">
+            <End Role="tbl_course" EntitySet="tbl_course" />
+            <End Role="tbl_course_subject" EntitySet="tbl_course_subject" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_enroll_tbl_course" Association="Self.FK_tbl_enroll_tbl_course">
+            <End Role="tbl_course" EntitySet="tbl_course" />
+            <End Role="tbl_enroll" EntitySet="tbl_enroll" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_course_subject_tbl_subject" Association="Self.FK_tbl_course_subject_tbl_subject">
+            <End Role="tbl_subject" EntitySet="tbl_subject" />
+            <End Role="tbl_course_subject" EntitySet="tbl_course_subject" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_enroll_tbl_customer" Association="Self.FK_tbl_enroll_tbl_customer">
+            <End Role="tbl_customer" EntitySet="tbl_customer" />
+            <End Role="tbl_enroll" EntitySet="tbl_enroll" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="databaseFirstModelStoreContainer" CdmEntityContainer="databaseFirstEntities">
+          <EntitySetMapping Name="tbl_course">
+            <EntityTypeMapping TypeName="databaseFirstModel.tbl_course">
+              <MappingFragment StoreEntitySet="tbl_course">
+                <ScalarProperty Name="course_Id" ColumnName="course_Id" />
+                <ScalarProperty Name="course_name" ColumnName="course_name" />
+                <ScalarProperty Name="course_desc" ColumnName="course_desc" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_course_subject">
+            <EntityTypeMapping TypeName="databaseFirstModel.tbl_course_subject">
+              <MappingFragment StoreEntitySet="tbl_course_subject">
+                <ScalarProperty Name="course_subject_id" ColumnName="course_subject_id" />
+                <ScalarProperty Name="course_id" ColumnName="course_id" />
+                <ScalarProperty Name="subject_id" ColumnName="subject_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_customer">
+            <EntityTypeMapping TypeName="databaseFirstModel.tbl_customer">
+              <MappingFragment StoreEntitySet="tbl_customer">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="customer_name" ColumnName="customer_name" />
+                <ScalarProperty Name="customer_desc" ColumnName="customer_desc" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_enroll">
+            <EntityTypeMapping TypeName="databaseFirstModel.tbl_enroll">
+              <MappingFragment StoreEntitySet="tbl_enroll">
+                <ScalarProperty Name="enroll_id" ColumnName="enroll_id" />
+                <ScalarProperty Name="student_id" ColumnName="student_id" />
+                <ScalarProperty Name="course_id" ColumnName="course_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_subject">
+            <EntityTypeMapping TypeName="databaseFirstModel.tbl_subject">
+              <MappingFragment StoreEntitySet="tbl_subject">
+                <ScalarProperty Name="sub_Id" ColumnName="sub_Id" />
+                <ScalarProperty Name="subject" ColumnName="subject" />
+                <ScalarProperty Name="status" ColumnName="status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_institute">
+            <EntityTypeMapping TypeName="databaseFirstModel.tbl_institute">
+              <MappingFragment StoreEntitySet="tbl_institute">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
