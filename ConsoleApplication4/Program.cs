@@ -29,12 +29,12 @@ namespace ConsoleApplication4
         static void IenumarableVsIquerable_test() {
 
 
-            cloudchargepaymentEntities _en1 = new cloudchargepaymentEntities();
+            //cloudchargepaymentEntities _en1 = new cloudchargepaymentEntities();
 
-            var _p = (from cx in _en1.msg_logs orderby cx.Id ascending select cx).AsEnumerable<msg_logs>();
-            var _t = (from cx in _en1.msg_logs orderby cx.Id ascending select cx).AsQueryable<msg_logs>();
-            var cf = _t.Skip(10).ToString();
-            var cv = _p.Skip(10).ToString();          
+            //var _p = (from cx in _en1.msg_logs orderby cx.Id ascending select cx).AsEnumerable<msg_logs>();
+            //var _t = (from cx in _en1.msg_logs orderby cx.Id ascending select cx).AsQueryable<msg_logs>();
+            //var cf = _t.Skip(10).ToString();
+            //var cv = _p.Skip(10).ToString();          
 
            // var t = _p.ToList().Skip(10).ToString();
            
@@ -44,7 +44,7 @@ namespace ConsoleApplication4
         static void _linqTosqlTest()
         {
 
-            cloudchargepaymentEntities _en1 = new cloudchargepaymentEntities();
+            //cloudchargepaymentEntities _en1 = new cloudchargepaymentEntities();
 
             //get top 10 record in desc order from ipn logs table
 
@@ -98,11 +98,11 @@ namespace ConsoleApplication4
             Stopwatch _c = new Stopwatch();
             _c.Start();
 
-            cloudchargepaymentEntities _en = new cloudchargepaymentEntities();
+           // cloudchargepaymentEntities _en = new cloudchargepaymentEntities();
 
             //get top 10 record in desc order from ipn logs table
             //lambda expression
-            IQueryable<IPN_logs> _ipnlogs = _en.IPN_logs.OrderByDescending(x => x.receivedDate).Take(10);
+          //  IQueryable<IPN_logs> _ipnlogs = _en.IPN_logs.OrderByDescending(x => x.receivedDate).Take(10);
             _ipnlogs.ToList().ForEach(xs =>
             {
                 Console.WriteLine(xs.Id.ToString());
@@ -117,12 +117,12 @@ namespace ConsoleApplication4
             Stopwatch _c1 = new Stopwatch();
             _c1.Start();
 
-            cloudchargepaymentEntities _en1 = new cloudchargepaymentEntities();
+            //cloudchargepaymentEntities _en1 = new cloudchargepaymentEntities();
 
             //get top 10 record in desc order from ipn logs table
-            IQueryable<IPN_logs> _ipnlogs1 = _en.IPN_logs.OrderByDescending(x => x.receivedDate).Take(10);
+          //  IQueryable<IPN_logs> _ipnlogs1 = _en.IPN_logs.OrderByDescending(x => x.receivedDate).Take(10);
 
-            var xc = _ipnlogs1.ToList();
+           // var xc = _ipnlogs1.ToList();
 
             foreach (IPN_logs cn in xc)
             {
