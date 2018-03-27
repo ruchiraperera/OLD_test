@@ -35,3 +35,10 @@ Parallel LINQ: This is a variation of LINQ to objects that has built-in support 
 LINQ to DataSet: This form of LINQ resembles LINQ to objects, except it digs DataRow objects out of a DataTable.
 
 LINQ to XML: This form of LINQ allows you to search the elements contained in an XElement or XDocument . In other words, it allows you to perform more powerful searches when dealing with in-memory XML data.
+
+
+//---------------
+
+inner join
+group join - same as inner join but aggregation function can be used with group join
+cross join

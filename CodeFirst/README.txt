@@ -20,5 +20,43 @@ Migration process..
 
 new > data > ADO.net entity model > code first from database
 
+//----------------------------------------------------------------------------------------
+
+overide the conde first conversion
+
+there two ways . => data annotations (recommend way) and fluent api
+
+exmaple - 
+database table one field needs to not null
+
+with data annotation  - 
+[Required]
+
+
+fluent API - in db context 
+protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Enityt<student>().property(t=> t.descroption).IsRequired()
+        }
+
+//-----------------------------------------------------------------------------------------
+
+data annotations
+
+[Table(tbl_student)]
+public class student{}
+
+[Key,databaseGenerated(databaseGeneratedOption.None)] // databaseGenerated(databaseGeneratedOption.None) if it is not auto generated one
+public string ISBN {get; set;}
+
+[index(isUnique = true)]
+
+
+//---------------------------
+
+relationship needs to maintain with fluent API
+
+
+
 
 

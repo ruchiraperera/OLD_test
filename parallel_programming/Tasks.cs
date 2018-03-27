@@ -27,7 +27,7 @@ namespace parallel_programming
                 var h = i;
                 _task.Add(Task.Run(() => { Display(h); }, _cts.Token));
             }
-            //_task.ForEach(x => x.Start());
+            //_task.ForEach(x => x.Start()); //if it is TASK then you need to start it
             //Parallel.ForEach(_t, task => task.Start());
 
             await Task.WhenAny(_task);
@@ -42,6 +42,8 @@ namespace parallel_programming
 
         public static void Display(int a)
         {
+            //_cts.Token.WaitHandle.WaitOne(20000);
+
             Random _t = new Random();
             int t = 0;
 

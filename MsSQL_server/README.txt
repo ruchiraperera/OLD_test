@@ -43,6 +43,10 @@
 
 	DML - user define triggers
 
+- what is sql cursor?
+
+	
+
 - What is a view in the database?
 	A View is nothing but a select query with a name given to it or we can simply say a view is a Named Query
 

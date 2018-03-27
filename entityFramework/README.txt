@@ -84,6 +84,8 @@ ADO.Net Framework was released with the .Net Framework 3.5 SP1.
 
 	_Orders = new Lazy<List<Order>>(() => LoadOrders());
 
+	**** Lazy loading is the process whereby an entity or collection of entities is automatically loaded from the database the first time that a property referring to the entity/entities is accessed. When using POCO entity types, lazy loading is achieved by creating instances of derived proxy types and then overriding virtual properties to add the loading hook.
+
 - what is Eagerly loading - query returns with related objects which can be acheived by using include method.
 	// Load all blogs and related posts 
     var blogs1 = context.Blogs 
