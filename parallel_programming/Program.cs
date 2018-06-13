@@ -40,6 +40,22 @@ namespace parallel_programming
         static void Main(string[] args)
         {
 
+            var _threadprority = new ThreadPrority();
+
+            Console.WriteLine("Thread Completed");
+            Console.Read();
+
+
+
+            var _taskCon = new TaskContinueWith();
+            _taskCon.parent_process();
+
+            Console.Read();
+
+            var _taskContinue = new TaskContinueWith();
+            _taskContinue.process();
+            Console.Read();
+
             _parallelcls _cls = new _parallelcls();
 
             // _cls.parallelInvoke();

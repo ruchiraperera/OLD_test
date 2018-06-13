@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E5395B81-065E-4274-9131-218FEDEC525B}</ProjectGuid>
+    <ProjectGuid>{97D3C426-74C7-459C-BF31-72E2534CBADE}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Frameworks</RootNamespace>
-    <AssemblyName>Frameworks</AssemblyName>
+    <RootNamespace>_Func</RootNamespace>
+    <AssemblyName>_Func</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -47,12 +47,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="build.PNG" />
-    <Content Include="hiddenFolder.PNG" />
-    <Content Include="README.txt" />
-    <Content Include="removepathfrombuild.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

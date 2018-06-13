@@ -16,6 +16,11 @@ namespace eventHandling
         public event onPdfGeneratorHandler onFinishPdf;
 
 
+        //or you can use
+        //EventHandler is Delegate
+        //public event EventHandler _test;
+
+
         public void generatePDf()
         {
             Console.WriteLine("Running pdf generater.....");
