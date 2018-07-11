@@ -14,9 +14,9 @@ namespace DynamicallyCallMethods
             Console.WriteLine("Constructor");
         }
 
-        public void display() {
+        public void display(int i) {
 
-            Console.WriteLine("Display function executed");
+            Console.WriteLine("Display function executed - {0}",i);
         }
     }
 }

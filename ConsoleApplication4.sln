@@ -87,6 +87,22 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MVC", "MVC", "{390AD2CB-B9B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackgroundWorkerProcess", "BackgroundWorkerProcess\BackgroundWorkerProcess.csproj", "{94AA1ECB-A263-4E4F-A09E-8295C5A651C4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "linkedList_linkedListNode", "linkedList_linkedListNode\linkedList_linkedListNode.csproj", "{E428080E-4EFA-47CE-9D82-2CCD52ACA9F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "operatorOverloading", "operatorOverloading\operatorOverloading.csproj", "{94C85810-A9AA-4382-A9EA-12B51557ECF7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCF_WEBAPI", "WCF_WEBAPI\WCF_WEBAPI.csproj", "{1222F69D-8CC0-4E57-AA29-4C07246A5717}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "prevent_decompile", "prevent_decompile", "{E5F39E38-6694-46CA-9F55-595E69F88C83}"
+	ProjectSection(SolutionItems) = preProject
+		..\Aveloy.DotRefiner_prevent_decomplie.zip = ..\Aveloy.DotRefiner_prevent_decomplie.zip
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Authentication_with_jwt", "Authentication_with_jwt", "{E7FB8B42-BC5E-4817-9F81-3933EFAD7930}"
+	ProjectSection(SolutionItems) = preProject
+		..\WebApi.Jwt-master.zip = ..\WebApi.Jwt-master.zip
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -298,6 +314,24 @@ Global
 		{94AA1ECB-A263-4E4F-A09E-8295C5A651C4}.Development|Any CPU.Build.0 = Debug|Any CPU
 		{94AA1ECB-A263-4E4F-A09E-8295C5A651C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{94AA1ECB-A263-4E4F-A09E-8295C5A651C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E428080E-4EFA-47CE-9D82-2CCD52ACA9F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E428080E-4EFA-47CE-9D82-2CCD52ACA9F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E428080E-4EFA-47CE-9D82-2CCD52ACA9F2}.Development|Any CPU.ActiveCfg = Debug|Any CPU
+		{E428080E-4EFA-47CE-9D82-2CCD52ACA9F2}.Development|Any CPU.Build.0 = Debug|Any CPU
+		{E428080E-4EFA-47CE-9D82-2CCD52ACA9F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E428080E-4EFA-47CE-9D82-2CCD52ACA9F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94C85810-A9AA-4382-A9EA-12B51557ECF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94C85810-A9AA-4382-A9EA-12B51557ECF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94C85810-A9AA-4382-A9EA-12B51557ECF7}.Development|Any CPU.ActiveCfg = Debug|Any CPU
+		{94C85810-A9AA-4382-A9EA-12B51557ECF7}.Development|Any CPU.Build.0 = Debug|Any CPU
+		{94C85810-A9AA-4382-A9EA-12B51557ECF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94C85810-A9AA-4382-A9EA-12B51557ECF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1222F69D-8CC0-4E57-AA29-4C07246A5717}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1222F69D-8CC0-4E57-AA29-4C07246A5717}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1222F69D-8CC0-4E57-AA29-4C07246A5717}.Development|Any CPU.ActiveCfg = Debug|Any CPU
+		{1222F69D-8CC0-4E57-AA29-4C07246A5717}.Development|Any CPU.Build.0 = Debug|Any CPU
+		{1222F69D-8CC0-4E57-AA29-4C07246A5717}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1222F69D-8CC0-4E57-AA29-4C07246A5717}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -312,6 +346,8 @@ Global
 		{B3741B7F-F868-47BF-A11E-F9055DD11292} = {512A8730-EF34-4AA7-A499-9B40D3DD77BE}
 		{0675AE77-7549-41CB-9774-E4A2E69CC7F4} = {512A8730-EF34-4AA7-A499-9B40D3DD77BE}
 		{242E48D5-9267-4297-9185-106CAF336A42} = {512A8730-EF34-4AA7-A499-9B40D3DD77BE}
+		{94C85810-A9AA-4382-A9EA-12B51557ECF7} = {9AA93928-0AE7-46BA-93CD-227FD7A2E25A}
+		{1222F69D-8CC0-4E57-AA29-4C07246A5717} = {9AA93928-0AE7-46BA-93CD-227FD7A2E25A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BF6486CC-B710-4CAB-AC65-C68A40DBBA1A}

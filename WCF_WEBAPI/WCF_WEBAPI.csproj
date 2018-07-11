@@ -4,13 +4,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E552A2E0-C374-4E1E-946B-30950AA135DC}</ProjectGuid>
+    <ProjectGuid>{1222F69D-8CC0-4E57-AA29-4C07246A5717}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>MsSQL_server</RootNamespace>
-    <AssemblyName>MsSQL_server</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <RootNamespace>WCF_WEBAPI</RootNamespace>
+    <AssemblyName>WCF_WEBAPI</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -49,14 +48,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Imoportant Queries\README.txt" />
-    <Content Include="Multi-tenant SaaS patterns - Azure SQL Database   Microsoft Docs.htm" />
-    <Content Include="multi_tenancy_pattern.txt" />
+    <Content Include="E57zv.gif" />
     <Content Include="README.txt" />
-    <Content Include="README1.txt" />
-    <Content Include="README2.txt" />
-    <Content Include="README3.txt" />
-    <Content Include="who_is_active_v11_30.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

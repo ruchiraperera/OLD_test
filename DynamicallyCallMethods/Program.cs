@@ -19,7 +19,7 @@ namespace DynamicallyCallMethods
 
             var _customer = new customer();
             MethodInfo _c = _customer.GetType().GetMethod("display");
-            _c.Invoke(_customer, args);
+            _c.Invoke(_customer, new object[] { 1 });
 
 
             Console.Read();

@@ -58,5 +58,10 @@ namespace OOP_class_and_objects
         {
             base.display();
         }
+
+        public override string ToString()
+        {
+            return string.Join(Environment.NewLine, "test");
+        }
     }
 }

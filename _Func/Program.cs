@@ -11,6 +11,9 @@ namespace _Func
         static void Main(string[] args)
         {
 
+            Func<int, int, int> _func = (x, t) => x + t;
+            _func(1, 2);
+
             Func<int, int> method = display;
 
             IAsyncResult _result = method.BeginInvoke(1, null, null);
