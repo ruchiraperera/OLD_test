@@ -103,6 +103,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Authentication_with_jwt", "
 		WebApi.Jwt-master.zip = WebApi.Jwt-master.zip
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WEB_API", "WEB_API", "{C6C25315-2C7F-45BA-B76C-18C099DE3913}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "json_xml_out_set_from_global", "json_xml_out_set_from_global\json_xml_out_set_from_global.csproj", "{2C71A6A1-C986-4896-9252-37E1B27AF176}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -332,6 +336,12 @@ Global
 		{1222F69D-8CC0-4E57-AA29-4C07246A5717}.Development|Any CPU.Build.0 = Debug|Any CPU
 		{1222F69D-8CC0-4E57-AA29-4C07246A5717}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1222F69D-8CC0-4E57-AA29-4C07246A5717}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C71A6A1-C986-4896-9252-37E1B27AF176}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C71A6A1-C986-4896-9252-37E1B27AF176}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C71A6A1-C986-4896-9252-37E1B27AF176}.Development|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C71A6A1-C986-4896-9252-37E1B27AF176}.Development|Any CPU.Build.0 = Debug|Any CPU
+		{2C71A6A1-C986-4896-9252-37E1B27AF176}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C71A6A1-C986-4896-9252-37E1B27AF176}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -348,6 +358,7 @@ Global
 		{242E48D5-9267-4297-9185-106CAF336A42} = {512A8730-EF34-4AA7-A499-9B40D3DD77BE}
 		{94C85810-A9AA-4382-A9EA-12B51557ECF7} = {9AA93928-0AE7-46BA-93CD-227FD7A2E25A}
 		{1222F69D-8CC0-4E57-AA29-4C07246A5717} = {9AA93928-0AE7-46BA-93CD-227FD7A2E25A}
+		{2C71A6A1-C986-4896-9252-37E1B27AF176} = {C6C25315-2C7F-45BA-B76C-18C099DE3913}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BF6486CC-B710-4CAB-AC65-C68A40DBBA1A}
