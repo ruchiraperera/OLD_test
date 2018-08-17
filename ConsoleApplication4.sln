@@ -95,12 +95,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCF_WEBAPI", "WCF_WEBAPI\WC
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "prevent_decompile", "prevent_decompile", "{E5F39E38-6694-46CA-9F55-595E69F88C83}"
 	ProjectSection(SolutionItems) = preProject
-		Aveloy.DotRefiner_prevent_decomplie.zip = Aveloy.DotRefiner_prevent_decomplie.zip
+		..\Aveloy.DotRefiner_prevent_decomplie.zip = ..\Aveloy.DotRefiner_prevent_decomplie.zip
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Authentication_with_jwt", "Authentication_with_jwt", "{E7FB8B42-BC5E-4817-9F81-3933EFAD7930}"
 	ProjectSection(SolutionItems) = preProject
-		WebApi.Jwt-master.zip = WebApi.Jwt-master.zip
+		..\WebApi.Jwt-master.zip = ..\WebApi.Jwt-master.zip
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WEB_API", "WEB_API", "{C6C25315-2C7F-45BA-B76C-18C099DE3913}"
