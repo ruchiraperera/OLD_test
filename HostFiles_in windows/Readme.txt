@@ -1,0 +1,2 @@
+﻿http://jungle as my local site url – for that to work I need to update my hosts file, located under 
+C:\Windows\System32\drivers\etc\hosts (edit it with notepad or any other code editor). I’ve added the line: 127.0.0.1 jungle
