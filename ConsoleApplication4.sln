@@ -95,12 +95,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCF_WEBAPI", "WCF_WEBAPI\WC
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "prevent_decompile", "prevent_decompile", "{E5F39E38-6694-46CA-9F55-595E69F88C83}"
 	ProjectSection(SolutionItems) = preProject
-		Aveloy.DotRefiner_prevent_decomplie.zip = Aveloy.DotRefiner_prevent_decomplie.zip
+		..\Aveloy.DotRefiner_prevent_decomplie.zip = ..\Aveloy.DotRefiner_prevent_decomplie.zip
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Authentication_with_jwt", "Authentication_with_jwt", "{E7FB8B42-BC5E-4817-9F81-3933EFAD7930}"
 	ProjectSection(SolutionItems) = preProject
-		WebApi.Jwt-master.zip = WebApi.Jwt-master.zip
+		..\WebApi.Jwt-master.zip = ..\WebApi.Jwt-master.zip
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "powershell", "powershell", "{851609B8-6D41-48AA-B10A-08ED1E6DCC34}"
@@ -113,8 +113,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IIS", "IIS", "{51520F88-F0C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReverseProxy", "ReverseProxy\ReverseProxy.csproj", "{1DBA1B27-7C2F-47E1-83DF-355A55209DCA}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WEP_API", "WEP_API", "{38D47A31-8F04-4E7C-87DB-16461337E752}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "get_output_as_xml_or_json_using_global", "get_output_as_xml_or_json_using_global\get_output_as_xml_or_json_using_global.csproj", "{3322431A-DC02-4287-9A96-8C0D38252A7B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dependancy_Injection", "Dependancy_Injection", "{943DF33D-858F-44C4-9C92-AA45C4FAEFE6}"
@@ -125,6 +123,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{2A3537AB
 	ProjectSection(SolutionItems) = preProject
 		C:\Users\Ruchira\Desktop\web config transform for build environment.PNG = C:\Users\Ruchira\Desktop\web config transform for build environment.PNG
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WEB_API", "WEB_API", "{C6C25315-2C7F-45BA-B76C-18C099DE3913}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "json_xml_out_set_from_global", "json_xml_out_set_from_global\json_xml_out_set_from_global.csproj", "{2C71A6A1-C986-4896-9252-37E1B27AF176}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -379,6 +381,12 @@ Global
 		{C62AB5CD-A0EE-440D-B3F5-9A84C28B00EF}.Development|Any CPU.Build.0 = Debug|Any CPU
 		{C62AB5CD-A0EE-440D-B3F5-9A84C28B00EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C62AB5CD-A0EE-440D-B3F5-9A84C28B00EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C71A6A1-C986-4896-9252-37E1B27AF176}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C71A6A1-C986-4896-9252-37E1B27AF176}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C71A6A1-C986-4896-9252-37E1B27AF176}.Development|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C71A6A1-C986-4896-9252-37E1B27AF176}.Development|Any CPU.Build.0 = Debug|Any CPU
+		{2C71A6A1-C986-4896-9252-37E1B27AF176}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C71A6A1-C986-4896-9252-37E1B27AF176}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -399,8 +407,9 @@ Global
 		{5CB390FD-9F2D-4B9D-ACE6-03F6C49EAD38} = {51520F88-F0CE-41F7-9DBD-F2B0A7E1A617}
 		{CB2E75D5-CB4D-4509-AFDA-7D8885B60BEC} = {5CB390FD-9F2D-4B9D-ACE6-03F6C49EAD38}
 		{1DBA1B27-7C2F-47E1-83DF-355A55209DCA} = {51520F88-F0CE-41F7-9DBD-F2B0A7E1A617}
-		{3322431A-DC02-4287-9A96-8C0D38252A7B} = {38D47A31-8F04-4E7C-87DB-16461337E752}
+		{3322431A-DC02-4287-9A96-8C0D38252A7B} = {C6C25315-2C7F-45BA-B76C-18C099DE3913}
 		{C62AB5CD-A0EE-440D-B3F5-9A84C28B00EF} = {943DF33D-858F-44C4-9C92-AA45C4FAEFE6}
+		{2C71A6A1-C986-4896-9252-37E1B27AF176} = {C6C25315-2C7F-45BA-B76C-18C099DE3913}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BF6486CC-B710-4CAB-AC65-C68A40DBBA1A}
