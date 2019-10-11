@@ -145,8 +145,8 @@ namespace parallel_programming
         public void parallelInvoke()
         {
 
-            Parallel.Invoke(() => { throw new Exception(); },
-                        () => { throw new Exception(); });
+            //Parallel.Invoke(() => { throw new Exception(); },
+            //            () => { throw new Exception(); });
 
             string[] _t = new string[8];
             Parallel.Invoke(() => { parallelForEach(); }, () => { parallelForEach(); });

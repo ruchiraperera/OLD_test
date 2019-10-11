@@ -9,13 +9,7 @@ namespace parallel_programming
     class Program
     {
         static async Task<string> ebookDownload()
-        {
-
-
-
-            
-
-
+        { 
 
             #region MyRegion
 
@@ -40,26 +34,28 @@ namespace parallel_programming
         static void Main(string[] args)
         {
 
-            var _threadprority = new ThreadPrority();
+            //var _threadprority = new ThreadPrority();
 
-            Console.WriteLine("Thread Completed");
-            Console.Read();
+            //Console.WriteLine("Thread Completed");
+            //Console.Read();
 
 
 
-            var _taskCon = new TaskContinueWith();
-            _taskCon.parent_process();
+            //var _taskCon = new TaskContinueWith();
+            //_taskCon.parent_process();
 
-            Console.Read();
+            //Console.Read();
 
-            var _taskContinue = new TaskContinueWith();
-            _taskContinue.process();
-            Console.Read();
+            //var _taskContinue = new TaskContinueWith();
+            //_taskContinue.process();
+            //Console.Read();
 
             _parallelcls _cls = new _parallelcls();
 
-            // _cls.parallelInvoke();
-            _cls._taskFactory();
+             _cls.parallelInvoke();
+
+            Console.WriteLine("test");
+            //_cls._taskFactory();
 
 
             Console.Read();
