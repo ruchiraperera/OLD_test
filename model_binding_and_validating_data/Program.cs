@@ -33,7 +33,8 @@ namespace model_binding_and_validating_data
             /// 
             /// Specify other binding source [fromQuery] [FromHeader(name = "Accept-Language")] [fromRoute]
             /// 
-            /// write overide custom model binder with DefaultModelBinder class (inheritance)
+            /// *** write overide custom model binder with DefaultModelBinder class (inheritance) - IModelBinder
+            /// this will use to write global custom binder 
             /// 
             /// 
             /// remote validation
@@ -43,6 +44,8 @@ namespace model_binding_and_validating_data
             /// public IActionResult MethodName([bind(prefix="pie.name")] string name){
             ///     return 1=1 ? Json(true) : Json ("This pie name is already taken");
             /// }
+            /// 
+            /// [FromBody] only from body. 
             /// 
             /// 
             /// 

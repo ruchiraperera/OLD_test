@@ -45,5 +45,7 @@ services.AddAntiforgery();
 then if you dont want antiforgery validation [ingoreAntiForgeryToken]
 
 
+[AcceptVerbs]
+
 
 
