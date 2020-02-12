@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29009.5
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2016
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "linq_lambda_practice", "ConsoleApplication4\linq_lambda_practice.csproj", "{31B00092-4441-4BCB-8E07-0F759341CCC2}"
 EndProject
@@ -164,7 +164,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "bindproperties_bindproperty
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "http_handlers_httpModule", "http_handlers_httpModule\http_handlers_httpModule.csproj", "{092C9E1C-0E98-455D-AC5B-C44C633CDA4E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ActionFilterAttributes", "ActionFilterAttributes\ActionFilterAttributes.csproj", "{9145C1C3-DE30-4262-AF1E-1F2D25D90BCA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ActionFilterAttributes", "ActionFilterAttributes\ActionFilterAttributes.csproj", "{9145C1C3-DE30-4262-AF1E-1F2D25D90BCA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ErrorHandling", "ErrorHandling\ErrorHandling.csproj", "{F630A8DE-54CB-4570-8256-DF1FC81BABF3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ICollection_Ilist_Ienumerable", "ICollection_Ilist_Ienumerable\ICollection_Ilist_Ienumerable.csproj", "{2A97B78D-55C9-4954-8C66-AC3B8E4F873F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DesignPrincipals", "DesignPrincipals", "{3D60A2E6-AF80-4AB1-89B8-FE175B73BA94}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidDesignPrincipals", "SolidDesignPrincipals\SolidDesignPrincipals.csproj", "{CF3815EF-6BC5-4525-947D-B4CDC125E55E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoapExtension", "SoapExtension\SoapExtension.csproj", "{E6103CC4-0906-48A6-975C-92ED5B9BE7F3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -551,6 +561,30 @@ Global
 		{9145C1C3-DE30-4262-AF1E-1F2D25D90BCA}.Development|Any CPU.Build.0 = Debug|Any CPU
 		{9145C1C3-DE30-4262-AF1E-1F2D25D90BCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9145C1C3-DE30-4262-AF1E-1F2D25D90BCA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F630A8DE-54CB-4570-8256-DF1FC81BABF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F630A8DE-54CB-4570-8256-DF1FC81BABF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F630A8DE-54CB-4570-8256-DF1FC81BABF3}.Development|Any CPU.ActiveCfg = Debug|Any CPU
+		{F630A8DE-54CB-4570-8256-DF1FC81BABF3}.Development|Any CPU.Build.0 = Debug|Any CPU
+		{F630A8DE-54CB-4570-8256-DF1FC81BABF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F630A8DE-54CB-4570-8256-DF1FC81BABF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A97B78D-55C9-4954-8C66-AC3B8E4F873F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A97B78D-55C9-4954-8C66-AC3B8E4F873F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A97B78D-55C9-4954-8C66-AC3B8E4F873F}.Development|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A97B78D-55C9-4954-8C66-AC3B8E4F873F}.Development|Any CPU.Build.0 = Debug|Any CPU
+		{2A97B78D-55C9-4954-8C66-AC3B8E4F873F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A97B78D-55C9-4954-8C66-AC3B8E4F873F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF3815EF-6BC5-4525-947D-B4CDC125E55E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF3815EF-6BC5-4525-947D-B4CDC125E55E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF3815EF-6BC5-4525-947D-B4CDC125E55E}.Development|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF3815EF-6BC5-4525-947D-B4CDC125E55E}.Development|Any CPU.Build.0 = Debug|Any CPU
+		{CF3815EF-6BC5-4525-947D-B4CDC125E55E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF3815EF-6BC5-4525-947D-B4CDC125E55E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6103CC4-0906-48A6-975C-92ED5B9BE7F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6103CC4-0906-48A6-975C-92ED5B9BE7F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6103CC4-0906-48A6-975C-92ED5B9BE7F3}.Development|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6103CC4-0906-48A6-975C-92ED5B9BE7F3}.Development|Any CPU.Build.0 = Debug|Any CPU
+		{E6103CC4-0906-48A6-975C-92ED5B9BE7F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6103CC4-0906-48A6-975C-92ED5B9BE7F3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -589,6 +623,8 @@ Global
 		{F7BA32A0-2035-4EE7-8B0A-97351E45FC35} = {95B06204-CE29-428F-A381-EE5C0DA76068}
 		{092C9E1C-0E98-455D-AC5B-C44C633CDA4E} = {390AD2CB-B9BC-4EDA-8CA8-C6BAF7AA5C2F}
 		{9145C1C3-DE30-4262-AF1E-1F2D25D90BCA} = {95B06204-CE29-428F-A381-EE5C0DA76068}
+		{F630A8DE-54CB-4570-8256-DF1FC81BABF3} = {390AD2CB-B9BC-4EDA-8CA8-C6BAF7AA5C2F}
+		{CF3815EF-6BC5-4525-947D-B4CDC125E55E} = {3D60A2E6-AF80-4AB1-89B8-FE175B73BA94}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BF6486CC-B710-4CAB-AC65-C68A40DBBA1A}
