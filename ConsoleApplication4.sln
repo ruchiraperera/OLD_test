@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28010.2016
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29503.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "linq_lambda_practice", "ConsoleApplication4\linq_lambda_practice.csproj", "{31B00092-4441-4BCB-8E07-0F759341CCC2}"
 EndProject
@@ -175,6 +175,10 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidDesignPrincipals", "SolidDesignPrincipals\SolidDesignPrincipals.csproj", "{CF3815EF-6BC5-4525-947D-B4CDC125E55E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoapExtension", "SoapExtension\SoapExtension.csproj", "{E6103CC4-0906-48A6-975C-92ED5B9BE7F3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFCore", "EFCore\EFCore.csproj", "{ACFCA76E-3FAD-499F-BD10-2B2685AB859E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Console_Application_with_startup", "Console_Application_with_startup\Console_Application_with_startup.csproj", "{EA5B44B7-A96F-4467-A123-ED12851A6942}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -585,6 +589,18 @@ Global
 		{E6103CC4-0906-48A6-975C-92ED5B9BE7F3}.Development|Any CPU.Build.0 = Debug|Any CPU
 		{E6103CC4-0906-48A6-975C-92ED5B9BE7F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E6103CC4-0906-48A6-975C-92ED5B9BE7F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACFCA76E-3FAD-499F-BD10-2B2685AB859E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACFCA76E-3FAD-499F-BD10-2B2685AB859E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACFCA76E-3FAD-499F-BD10-2B2685AB859E}.Development|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACFCA76E-3FAD-499F-BD10-2B2685AB859E}.Development|Any CPU.Build.0 = Debug|Any CPU
+		{ACFCA76E-3FAD-499F-BD10-2B2685AB859E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACFCA76E-3FAD-499F-BD10-2B2685AB859E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA5B44B7-A96F-4467-A123-ED12851A6942}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA5B44B7-A96F-4467-A123-ED12851A6942}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA5B44B7-A96F-4467-A123-ED12851A6942}.Development|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA5B44B7-A96F-4467-A123-ED12851A6942}.Development|Any CPU.Build.0 = Debug|Any CPU
+		{EA5B44B7-A96F-4467-A123-ED12851A6942}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA5B44B7-A96F-4467-A123-ED12851A6942}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -625,6 +641,8 @@ Global
 		{9145C1C3-DE30-4262-AF1E-1F2D25D90BCA} = {95B06204-CE29-428F-A381-EE5C0DA76068}
 		{F630A8DE-54CB-4570-8256-DF1FC81BABF3} = {390AD2CB-B9BC-4EDA-8CA8-C6BAF7AA5C2F}
 		{CF3815EF-6BC5-4525-947D-B4CDC125E55E} = {3D60A2E6-AF80-4AB1-89B8-FE175B73BA94}
+		{ACFCA76E-3FAD-499F-BD10-2B2685AB859E} = {95B06204-CE29-428F-A381-EE5C0DA76068}
+		{EA5B44B7-A96F-4467-A123-ED12851A6942} = {95B06204-CE29-428F-A381-EE5C0DA76068}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BF6486CC-B710-4CAB-AC65-C68A40DBBA1A}
