@@ -3,16 +3,18 @@ using System;
 
 /*
  * .NET core DI 
+ * https://docs.microsoft.com/en-gb/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-3.1#default-service-container-replacement
  * 
  * transient - create instance in each and every request
  * scoped - create instance for each web request. Therefore user can exchange values between to controllers or methods.
  * singleton - create instance only in application start. 
  * 
+ * NetCore.AutoRegisterDi for auto map inteface with core DI
  * 
  * Sticking to the standard .NET Core container may eliminate some complexity and 
  * barriers for junior devs, but may require a bit of extra coding. It all can be justified on 
  * smaller projects. When on big projects having rich functionality 
- * of Autofac brings much more benefits and Autofac may become irreplaceable.
+ * of Autofac /Ninject brings much more benefits and Autofac may become irreplaceable.
  * 
  * Defualt .net core Di doent not contains scaning option. However with Scrutor we can add that option.
  * services.Scan(scan => 
@@ -20,7 +22,11 @@ using System;
         .AddClasses()
         .AsMatchingInterface());
 
+    or else
 
+    s.LookForRegistries();
+    //s.AssembliesAndExecutablesFromPath(Environment.CurrentDirectory);
+    s.SingleImplementationsOfInterface();
 
 
  * Best Pratices
@@ -47,6 +53,11 @@ using System;
  * <PackageReference Include="structuremap" Version="4.7.1" />* 
  * 
  * 
+ * autofact example
+ * // Scan an assembly for components
+builder.RegisterAssemblyTypes(myAssembly)
+       .Where(t => t.Name.EndsWith("Repository"))
+       .AsImplementedInterfaces();
  */
 
 namespace Learning_Dependency_Injection_for_Core

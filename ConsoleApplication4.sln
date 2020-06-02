@@ -186,7 +186,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Learning_Dependency_Injecti
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "startup_file_configuration", "startup_file_configuration\startup_file_configuration.csproj", "{370C7A2F-213F-4675-A125-18F567419BBF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Create_WebApps_in_Core", "Create_WebApps_in_Core\Create_WebApps_in_Core.csproj", "{A7A489AD-F7FC-4510-841F-8F4E4FB04367}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Create_WebApps_in_Core", "Create_WebApps_in_Core\Create_WebApps_in_Core.csproj", "{A7A489AD-F7FC-4510-841F-8F4E4FB04367}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Covarient_Contravariance", "Covarient_Contravariance", "{E7DFF8C8-2300-431C-842A-9EBDDFB6C23D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Covarient_ControVariant", "Covarient_ControVariant\Covarient_ControVariant.csproj", "{BA6C00FA-AE6D-4197-9618-04B5565137F2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DependencyResolver_withLamar", "DependencyResolver\DependencyResolver_withLamar.csproj", "{2738635B-9D3E-4F15-8E0B-48EBF407E667}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericExamples", "GenericExamples\GenericExamples.csproj", "{43B53DD6-9E34-4637-AF48-4224A133B70F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -633,6 +641,24 @@ Global
 		{A7A489AD-F7FC-4510-841F-8F4E4FB04367}.Development|Any CPU.Build.0 = Debug|Any CPU
 		{A7A489AD-F7FC-4510-841F-8F4E4FB04367}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A7A489AD-F7FC-4510-841F-8F4E4FB04367}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA6C00FA-AE6D-4197-9618-04B5565137F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA6C00FA-AE6D-4197-9618-04B5565137F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA6C00FA-AE6D-4197-9618-04B5565137F2}.Development|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA6C00FA-AE6D-4197-9618-04B5565137F2}.Development|Any CPU.Build.0 = Debug|Any CPU
+		{BA6C00FA-AE6D-4197-9618-04B5565137F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA6C00FA-AE6D-4197-9618-04B5565137F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2738635B-9D3E-4F15-8E0B-48EBF407E667}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2738635B-9D3E-4F15-8E0B-48EBF407E667}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2738635B-9D3E-4F15-8E0B-48EBF407E667}.Development|Any CPU.ActiveCfg = Debug|Any CPU
+		{2738635B-9D3E-4F15-8E0B-48EBF407E667}.Development|Any CPU.Build.0 = Debug|Any CPU
+		{2738635B-9D3E-4F15-8E0B-48EBF407E667}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2738635B-9D3E-4F15-8E0B-48EBF407E667}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43B53DD6-9E34-4637-AF48-4224A133B70F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43B53DD6-9E34-4637-AF48-4224A133B70F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43B53DD6-9E34-4637-AF48-4224A133B70F}.Development|Any CPU.ActiveCfg = Debug|Any CPU
+		{43B53DD6-9E34-4637-AF48-4224A133B70F}.Development|Any CPU.Build.0 = Debug|Any CPU
+		{43B53DD6-9E34-4637-AF48-4224A133B70F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43B53DD6-9E34-4637-AF48-4224A133B70F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -679,6 +705,9 @@ Global
 		{5EB9024C-3742-4B9A-A481-9F388198905C} = {95B06204-CE29-428F-A381-EE5C0DA76068}
 		{370C7A2F-213F-4675-A125-18F567419BBF} = {95B06204-CE29-428F-A381-EE5C0DA76068}
 		{A7A489AD-F7FC-4510-841F-8F4E4FB04367} = {95B06204-CE29-428F-A381-EE5C0DA76068}
+		{BA6C00FA-AE6D-4197-9618-04B5565137F2} = {E7DFF8C8-2300-431C-842A-9EBDDFB6C23D}
+		{2738635B-9D3E-4F15-8E0B-48EBF407E667} = {95B06204-CE29-428F-A381-EE5C0DA76068}
+		{43B53DD6-9E34-4637-AF48-4224A133B70F} = {95B06204-CE29-428F-A381-EE5C0DA76068}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BF6486CC-B710-4CAB-AC65-C68A40DBBA1A}

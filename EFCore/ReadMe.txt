@@ -67,18 +67,16 @@ concurrency Check
 	    [ConcurrencyCheck]
     public string LastName { get; set; }
 
+	//fluent api declaration with model binder..
 	protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
          modelBuilder.Entity<Author>()
             .Property(a => a.LastName).IsConcurrencyToken();
     } 
 
-
 //--------------------------------------------------------------------------------------------------------------
 
-
 Concurrency management in EF Code
-
 There are three ways of concurrency management
 
 	01, last in wins
@@ -92,6 +90,19 @@ pessmistic concurrency - when the record has been being edited by one person the
 person wont allow to edit while first person finish the job.
 
 optimistic concurrency - check the version and available to edit. before data has been updated it check the concurrency checks.
+
+//--------------------------------------------------------------------------------------------------------------
+
+	Computed Columns
+
+	[DatabaseGenerated(DatabaseGeneratedOption.Computed)]
+    public DateTime LastUpdated { get; set; }
+
+	with fluent API
+
+	modelBuilder.Entity<Person>()
+        .Property(p => p.DisplayName)
+        .HasComputedColumnSql("[LastName] + ', ' + [FirstName]");
 
 //--------------------------------------------------------------------------------------------------------------
 

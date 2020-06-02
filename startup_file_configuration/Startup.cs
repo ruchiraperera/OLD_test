@@ -29,15 +29,13 @@ namespace startup_file_configuration
             {
                 app.UseDeveloperExceptionPage();
             }
+            else
+            {
+                //exception handler page
+                app.UseExceptionHandler("/error.html");
+            }
 
             app.UseRouting();
-
-            // this will help to attached any number of response to the result.
-            //app.Use(async (context, next) => {               
-
-            //    await context.Response.WriteAsync("Hello World!111");
-            //    await next();
-            //});
             
             //--------------------------------------------- File Browsing -------------------
             app.UseDefaultFiles(); //this should be called before UseStaticFiles
@@ -70,7 +68,24 @@ namespace startup_file_configuration
             //extension method from Startup.ConfigureServices:
 
             //--------------------------------------------- File Browsing -------------------
-            
+
+
+            // ---------------------------------- what is the different between app.use and app.run ------------------------
+            // this will help to attached any number of response to the result.
+            //app.Use may call next middleware component in the pipeline. On the other hand, middlware defined 
+            //using app.Run will never call subsequent middleware. Let’s see via code.
+            //app.Use(async (context, next) => {
+            //    await context.Response.WriteAsync("Render in the page");
+            //    await next();
+            //});
+
+            //app.Run(async (context) => {
+            //    await context.Response.WriteAsync("this text will be rendered in the page");
+            //});
+
+            // ---------------------------------- what is the different between app.use and app.run ------------------------
+
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapGet("/", async context =>

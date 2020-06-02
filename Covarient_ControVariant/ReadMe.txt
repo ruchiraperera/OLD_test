@@ -1,0 +1,52 @@
+﻿Ienumerable inteface is covariant
+
+check ProdctModel and testModel
+
+contro variant (in)
+
+// Contravariant interface.
+interface IContravariant<in A> { }
+ 
+// Extending contravariant interface.
+interface IExtContravariant<in A> : IContravariant<A> { }
+ 
+// Implementing contravariant interface.
+class Sample<A> : IContravariant<A> { }
+ 
+class Program
+{
+    static void Test()
+    {
+        IContravariant<Object> iobj = new Sample<Object>();
+        IContravariant<String> istr = new Sample<String>();
+ 
+        // You can assign iobj to istr because
+        // the IContravariant interface is contravariant.
+        istr = iobj;
+    }
+}
+
+
+covariant (out)
+
+// Covariant interface.
+interface ICovariant<out R> { }
+ 
+// Extending covariant interface.
+interface IExtCovariant<out R> : ICovariant<R> { }
+ 
+// Implementing covariant interface.
+class Sample<R> : ICovariant<R> { }
+ 
+class Program
+{
+    static void Test()
+    {
+        ICovariant<Object> iobj = new Sample<Object>();
+        ICovariant<String> istr = new Sample<String>();
+ 
+        // You can assign istr to iobj because
+        // the ICovariant interface is covariant.
+        iobj = istr;
+    }
+}

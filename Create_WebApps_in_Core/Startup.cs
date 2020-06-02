@@ -25,6 +25,7 @@ namespace Create_WebApps_in_Core
         public void ConfigureServices(IServiceCollection services)
         {
             //add defualt page
+            //Delete the old “/Index.cshtml” file, as we would not use it anymore. If you don’t delete, the system may throw an error.
             services.AddMvc().AddRazorPagesOptions(option => {
                 option.Conventions.AddPageRoute("/StudentView/Index","");
             
